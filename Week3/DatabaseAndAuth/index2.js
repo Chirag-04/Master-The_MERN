@@ -2,7 +2,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const jwtPassword = "123456"; // while encrption and decryption
 
-
+// basis ogf auth
 const app = express();
 app.use(express.json());
 const ALL_USERS = [
