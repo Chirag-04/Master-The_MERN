@@ -15,6 +15,8 @@ setInterval(() => {
     numberOfRequestsForUser = {};
 }, 1000)
 
+// this piece of code can be resued for checking the rate limiter
+
 
 function rateLimitTheuser(req ,res , next){
     const userId = (req.headers["user-id"]);
