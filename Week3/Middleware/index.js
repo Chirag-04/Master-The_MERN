@@ -23,7 +23,7 @@ app.get('/errorCount', function(req, res) {
 
 // end 
 app.use(function(err , req , res , next){
-    errorCount++;
+    errorCount = errorCount + 1;
     res.status(404).json({msg : "bad request"});
 })
 
