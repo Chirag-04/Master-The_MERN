@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="principal" type="text" placeholder="Enter principal"/>
+    <br/><br/>
+    <input id="rate" type="text" placeholder="Enter rate"/>
+    <br/><br/>
+    <input id="time" type="text" placeholder="Enter time"/>
+    <br/><br/>
+    <button onclick="calcInterest()">Calculate interest</button>
+    <div id="interest"></div>
+    <script>
+        async function calcInterest(){
+            // alert('you clicked button');
+            const p =  document.getElementById("principal").value;
+            const r = document.getElementById("rate").value;
+            const t = document.getElementById("time").value
+            console.log("p , r , t" ,p  , r, t);
+            try{
+                const response = await fetch(`http://localhost:8800/interest?principal=${p}&rate=${r}&time=${t}`);
+                const output = await response.text();
+                console.log(output);
+                document.getElementById("interest").innerHTML = output;
+            }catch(err){
+                console.log(err);
+                document.getElementById("interest").innerHTML = `${err.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
