@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="first" type="text" placeholder="Enter First Number"/>
+        <br/><br/>
+        <input id="second" type="text" placeholder="Enter Second Number"/>
+        <br/><br/>
+        <button onclick="CalculateSum()">Calculate Sum</button>
+        <div id="finalSum"></div>
+    </div>
+
+    <script>
+        async function CalculateSum(){
+           // document objects helps in changing the element and making the site dynamic
+           const firstNumber = (document.getElementById("first").value);
+           const secondNumber = (document.getElementById("second").value);
+           try{
+            const response = await fetch(`http://localhost:8800/sum?a=${firstNumber}&b=${secondNumber}`);
+            // now this response is again a promise 
+            const output = await response.text();
+            const element = document.getElementById("finalSum");
+            element.innerText = output
+           }catch(err){
+            console.log(err);
+            document.getElementById("finalSum").innerText = `Error : ${err.message}`
+           }
+        }
+    </script>
+</body>
+</html>
