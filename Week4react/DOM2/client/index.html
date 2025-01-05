@@ -6,15 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="principal" type="text" placeholder="Enter principal"/>
+    <input oninput="debounceCalcInterest()" id="principal" type="text" placeholder="Enter principal"/>
     <br/><br/>
-    <input id="rate" type="text" placeholder="Enter rate"/>
+    <input oninput="debounceCalcInterest()"  id="rate" type="text" placeholder="Enter rate"/>
     <br/><br/>
-    <input id="time" type="text" placeholder="Enter time"/>
+    <input  oninput="debounceCalcInterest()"  id="time" type="text" placeholder="Enter time"/>
     <br/><br/>
-    <button onclick="calcInterest()">Calculate interest</button>
+    <!-- <button onclick="calcInterest()">Calculate interest</button> -->
     <div id="interest"></div>
     <script>
+        let timer;
+        function debounceCalcInterest(){
+            clearTimeout(timer);
+            timer = setTimeout(()=>{
+                calcInterest();
+            },5000)
+        }
         async function calcInterest(){
             // alert('you clicked button');
             const p =  document.getElementById("principal").value;

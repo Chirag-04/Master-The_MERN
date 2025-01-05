@@ -3,7 +3,6 @@ const cors =  require('cors')
 const app = express();
 const port =  8800;
 
-
 // 
 app.use(cors())
 app.get('/interest', (req ,res)=>{
@@ -12,10 +11,11 @@ app.get('/interest', (req ,res)=>{
     const time =  parseInt(req.query.time);
 
     const interest = (principal * rate * time)/100;
-
     res.send(interest.toString());
 })
 
 app.listen(port , ()=>{
     console.log(`Serving is runnig at ${port}`)
 })
+
+
