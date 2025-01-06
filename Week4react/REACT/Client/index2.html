@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="title" type="text" placeholder="title"/>
+        <br/><br/>
+        <input id="description" type="text" placeholder="description"/>
+        <br/><br/>
+
+        <button onclick="addTodo()">Add todo</button>
+        <div id="container"></div>
+    </div>
+    <script>
+        function latestTodos(state){
+            document.getElementById("container").innerHTML ="";
+            for(let i = 0; i<state.length ; i++){
+                const element =  createATodo(state[i].title , state[i].description);
+                document.getElementById("container").appendChild(element);
+            }
+        }
+        function createATodo(title, desc ){
+            
+            const outerDiv = document.createElement("div");
+            const firstGrandChild =  document.createElement("div");
+            firstGrandChild.innerHTML = title;
+
+            const secondGrandChild =  document.createElement("div");
+            secondGrandChild.innerHTML = desc;
+
+            const thirdGrandChild = document.createElement("button");
+            thirdGrandChild.innerHTML = "Mark as Done"
+
+            thirdGrandChild.addEventListener( "click" , function(){
+                this.innerHTML = "Done";
+            })
+            
+            outerDiv.appendChild(firstGrandChild);
+            outerDiv.appendChild(secondGrandChild);
+            outerDiv.appendChild(thirdGrandChild);
+
+            return outerDiv;
+        }
+            // const title =  document.getElementById("title").value;
+            // const desc =   document.getElementById("description").value
+            async function refreshDB(){
+                const response = await fetch("http://localhost:8800/todos");
+                const output =  await response.json();
+                console.log(output);
+                latestTodos(output);
+            }
+            refreshDB();
+    </script>
+</body>
+</html>
