@@ -13,14 +13,15 @@ cross axis from top to bottom
 
 
 Flex properties
-display
-flex-direction
-flex-wrap
-flex-flow
+display (flex inline-flex)
+flex-direction (row row-reverse colum column-reverse)
+flex-wrap (use to wrap child container within main container)
+wrap , no-wrap ,wrap-reverse(last items move above than below)
+flex-flow  <flex-direction><flex-wrap>
 column-gap
 row-gap
-gap
-justify-content
-align-items
-align-content
+gap <row_gap> <col_gap>
+justify-content start, center ,end, space-between(empty space b/w elements) , space-around (empty space b/w element and half of it from start and end ), space-evenly
+align-items strech(all height) ,, flex -start , flex-end,center , baseline
+align-content :
 

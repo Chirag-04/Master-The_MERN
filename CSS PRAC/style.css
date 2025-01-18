@@ -1,0 +1,43 @@
+
+  .container {
+    border: 6px solid black;
+    display: flex;
+    justify-content: ;
+  }
+  .flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .item-1 {
+    background-color: #fb8dc2;
+    /* font-size: 50px; */
+  }
+  .item-2 {
+    background-color: #6dfcd4;
+    /* font-size: 70px; */
+    
+  }
+  .item-3 {
+    background-color: #f7c65c;
+    /* font-size: 180px; */
+  }
+  .item-4 {
+    background-color: #894fe8;
+  }
+  .item-5 {
+    background-color: #6b0803;
+  }
+  .item-6 {
+    background-color: #11d2f8;
+  }
+  .item-7 {
+    background-color: #0f51ea;
+  }
+  .item-8 {
+    background-color: #01243a;
+  }
+  .item-9 {
+    background-color: #aad041;
+  }
