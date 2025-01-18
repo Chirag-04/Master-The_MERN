@@ -1,0 +1,26 @@
+one dimension layout model
+
+allows us to design flexible and efficient layouts, align and distribute space smoung items in a container 
+
+conventions/ terminology =
+parent element = flex container 
+child element =  flex items
+
+
+flexbox axes
+main axis from left to right
+cross axis from top to bottom
+
+
+Flex properties
+display
+flex-direction
+flex-wrap
+flex-flow
+column-gap
+row-gap
+gap
+justify-content
+align-items
+align-content
+

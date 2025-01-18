@@ -1,0 +1,141 @@
+not a programming language 
+styling language
+used t style html documents
+
+div => block element , span =>inline tag
+Topics
+1. methods to add css 
+2. Selectors (universal Selectors (*)) , class Selectors and id Selectors(generally kept unique)
+3.Properties (Color , Background color , Font styles )
+
+
+CSS => (inline css using style ="color: red" , <style><style> & external css)
+
+Selectors ==> (.class , element:{} , #class)
+
+Color ==> (color : rgba , color : red , color : #ffffff)
+
+BackgroundColor ==> (background-color: orange)
+
+Font Styles ==>(font-family :Verdana , font-size :50px , font-weight:bol
+d , font-style:italic )
+
+Text ==> (text-decoration : underline , text-align:center , text-align : right )
+
+
+line height ==> (line-height: 20px) {use to change the vertical height}
+
+letter spacing ==> (letter-spacing: 2px)
+(same for word-spacing)
+
+list style ==> (list-style-type: square , none , circle etc)
+
+css box model ==> consist of content , padding , border , margin 
+
+Cascade => when two rules that have equal specificty(how the brwoser decides which rile applies if multiple rules have differnet Selectors but apply to same element ) , the one that comes last in the css ins the one that will be used
+
+h2{
+    color: red
+}
+
+h2{
+    color : blue
+}
+
+blue color will be applied to the text
+
+a class selector is more specific that element selector
+
+<h2 class="heading"></h2>
+
+.heading{
+    color :blue
+}
+h2{
+    color: red
+}
+
+blue color will be applied to the heading
+
+
+inline style > id selector > class selector > element selector
+
+to break this rule in a selector we can do color : red !important
+
+
+inheritance  => some css properrty values set on parent elemens are inherited by their child elements , and some are not
+
+table-css =>
+
+th,td{
+    border: 1px solid black;
+}
+ table{
+    border-collapse: collapse;
+    background-color: bisque;
+    width: 70%;
+    text-align: center;
+ }
+
+ td{
+    height: 30px;
+    vertical-align:bottom;
+    padding: 10px;
+ }
+
+ th{
+    padding: 10px;
+ }
+
+
+display** VIP
+display : none (to not to display the data)
+display : inline (converting to block element)
+display : block (converting to inline element )
+
+
+Position *******
+whenever elemens : display => absolute
+(wo elemens ek layer upar aa jata h and left over space will be covered by rest of the divs)
+ after absolute element is free to move in space , to restrict that guy we must apply Position: absolute
+
+
+ css units
+ absolute units : cm , px, in
+
+ relative units : vh , vw , em  ,rem("x times" of font size)
+
+ 1em = font size of element
+
+ <div class="em-container">Em unit 
+ <div class="em">Em Child element</div>
+ </div>
+
+ .em-container{
+    font-size : 20px;
+    height : 2em; (height will be 40px)
+ }
+
+ .em{
+    font-size : 1.5em (30px)
+ }
+
+// rem : root element (body basically)
+
+
+math function
+calc(50vh - 100px)
+
+max(50px , 60vh)
+
+min(50px , 60vh)
+
+
+
+
+
+
+
+
+
+

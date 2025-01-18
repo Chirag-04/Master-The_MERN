@@ -1,0 +1,123 @@
+.orange{
+    background-color: orange;
+    text-align: center;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.hello{
+    background-color: aqua;
+    text-align: center;
+    /* text-decoration: underline; */
+    line-height: 60px;
+    letter-spacing: 40px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.box-model{
+    background-color: pink  ;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#id_content{
+    color: orange;
+}
+
+.content{
+    color:darkgreen;
+}
+
+h3{
+    color:blue;
+}
+
+
+.inherit{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    text-align: center;
+}
+
+.inheritp{
+    background-color: lightgreen;
+}
+
+.inheritd{
+    background-color: lightcoral;
+}
+
+
+th,td{
+    border: 1px solid black;
+}
+ table{
+    border-collapse: collapse;
+    background-color: bisque;
+    width: 70%;
+    text-align: center;
+ }
+
+ td{
+    height: 30px;
+    vertical-align:bottom;
+    padding: 10px;
+ }
+
+ th{
+    padding: 10px;
+ }
+
+
+ .sample1{
+background-color: red;
+display: inline;
+ }
+
+ .sample2{
+    background-color: red;
+    /* display: block; */
+ }
+.box1{
+    height: 50px;
+    width: 70px;
+    background-color: lightcoral;
+} 
+
+.box{
+    height: 2000px;
+    background-color: bisque;
+    width: 260px;
+}
+.box2{
+    height: 50px; 
+    width: 80px;
+    background-color: lightgreen;
+    left: 70%;
+} 
+
+
+.box3{
+    height: 80px; 
+    width: 50px;
+    background-color: lightskyblue;
+    position: sticky;
+  top: 0;
+} 
+
+.box4{
+    height: 150px;
+    width: 150px;
+    background-color: lightslategrey;
+}
+
+
+
